@@ -1,0 +1,129 @@
+/* ====== estilo.css ====== */
+
+/* Paleta escura moderna */
+:root {
+    --bg: #0f0f0f;
+    --surface: #1b1b1b;
+    --text: #eaeaea;
+    --accent: #b8963e;
+    --muted: #888;
+    --code-bg: #202020;
+  }
+  
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Inter", "Poppins", system-ui, sans-serif;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 24px;
+  }
+  
+  /* Cabeçalhos */
+  h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: var(--accent);
+    margin-top: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.6rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  
+  /* Parágrafos e espaçamento */
+  p {
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  ul {
+    list-style: square;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+  }
+  
+  strong {
+    color: var(--accent);
+  }
+  
+  /* Código (markdown-style) */
+  code,
+  pre {
+    background: var(--code-bg);
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+    color: #e2e2e2;
+  }
+  
+  pre {
+    display: block;
+    padding: 1rem;
+    overflow-x: auto;
+    border-left: 3px solid var(--accent);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Bloco de citação */
+  blockquote {
+    background: var(--surface);
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.5rem;
+    color: var(--muted);
+    margin: 2rem 0;
+    border-radius: 8px;
+  }
+  
+  /* Links */
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  a:hover {
+    color: #d6b45e;
+  }
+  
+  /* Layouts e containers */
+  body > *:not(:first-child) {
+    animation: fadeIn 0.4s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Separador */
+  hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 2rem 0;
+  }
+  

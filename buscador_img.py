@@ -10,7 +10,7 @@ import subprocess
 PASTA_ALVO = r'C:\Users\Mateus\Pictures\Camera Roll'
 
 # Atalho definido pelo usuário (pode ser alterado)
-ATALHO_USUARIO = 'ctrl+shift+f'
+ATALHO_USUARIO = 'ctrl+shift+i'
 
 def obter_texto_selecionado():
     pyautogui.hotkey('ctrl', 'c')
