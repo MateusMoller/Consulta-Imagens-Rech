@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Executável — Passo a Passo Leigo</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <h1>💾 Como transformar o programa <code>buscador_img.py</code> em um arquivo .EXE</h1>
+
+  <p>
+    Este guia foi feito para quem <strong>não entende nada de programação</strong> 😄.  
+    Siga os passos abaixo com calma e você vai conseguir transformar o programa em um arquivo 
+    <strong>.exe</strong>, que roda com um clique, igual aos outros programas do Windows.
+  </p>
+
+  <hr>
+
+  <h2>🧩 O que você vai precisar</h2>
+  <ul>
+    <li>💻 Um computador com <strong>Windows 10 ou 11</strong>;</li>
+    <li>🌐 Acesso à internet;</li>
+    <li>🐍 O <strong>Python</strong> instalado — baixe aqui:  
+      👉 <a href="https://www.python.org/downloads/" target="_blank">Baixar Python</a></li>
+  </ul>
+
+  <blockquote>
+    <strong>Dica:</strong> durante a instalação do Python, marque a opção  
+    <strong>“Add Python to PATH”</strong> antes de clicar em “Install Now”.
+  </blockquote>
+
+  <hr>
+
+  <h2>⚙️ Passo 1 — Instalar o PyInstaller</h2>
+  <p>O PyInstaller é o programa que vai transformar seu script Python em um arquivo .exe.</p>
+
+  <p>1️⃣ Clique no menu Iniciar e digite <strong>Prompt de Comando</strong> ou <strong>PowerShell</strong>.<br>
+  2️⃣ Clique com o botão direito e escolha <strong>Executar como administrador</strong>.</p>
+
+  <p>3️⃣ Digite o comando abaixo e pressione <strong>Enter</strong>:</p>
+  <pre><code>pip install pyinstaller</code></pre>
+
+  <blockquote>
+    Se aparecer algo como “Successfully installed pyinstaller”, deu certo ✅
+  </blockquote>
+
+  <hr>
+
+  <h2>📂 Passo 2 — Coloque o seu programa em uma pasta</h2>
+  <ol>
+    <li>Crie uma pasta em algum lugar fácil, por exemplo:
+      <pre><code>C:\BuscadorDeImagens</code></pre></li>
+    <li>Coloque dentro dela o arquivo <code>buscador_img.py</code>.</li>
+  </ol>
+
+  <blockquote>
+    Dica: é melhor que o nome da pasta não tenha espaços (ex: "BuscadorDeImagens", e não "Buscador de Imagens").
+  </blockquote>
+
+  <hr>
+
+  <h2>🧰 Passo 3 — Abrir a pasta no terminal</h2>
+  <p>1️⃣ Vá até a pasta que você criou.<br>
+  2️⃣ Clique na barra de endereço do explorador de arquivos (onde aparece “C:\BuscadorDeImagens”).<br>
+  3️⃣ Digite <code>cmd</code> e pressione <strong>Enter</strong>.</p>
+
+  <p>Vai abrir uma janela preta — é o terminal. Ela já estará dentro da sua pasta.</p>
+
+  <img src="cmd-exemplo.jpg" alt="Exemplo do terminal aberto na pasta" style="max-width:100%; border-radius:10px; margin:10px 0;">
+
+  <hr>
+
+  <h2>🪄 Passo 4 — Gerar o executável</h2>
+  <p>Agora digite o comando abaixo e pressione <strong>Enter</strong>:</p>
+
+  <pre><code>pyinstaller --onefile buscador_img.py</code></pre>
+
+  <p>O computador vai trabalhar por alguns segundos...  
+  Quando terminar, ele vai criar duas pastas novas: <strong>build</strong> e <strong>dist</strong>.</p>
+
+  <blockquote>
+    ✅ Dentro da pasta <code>dist</code> estará o arquivo <strong>buscador_img.exe</strong>.  
+    É esse arquivo que você pode abrir com dois cliques!
+  </blockquote>
+
+  <hr>
+
+  <h2>🎨 Passo 5 — (Opcional) deixar mais bonito</h2>
+  <p>Você pode adicionar um ícone e esconder a janelinha preta que aparece ao abrir.</p>
+
+  <p>Coloque um ícone (.ico) dentro da pasta, e digite este comando no lugar do anterior:</p>
+  <pre><code>pyinstaller --onefile --noconsole --icon=meu_icone.ico buscador_img.py</code></pre>
+
+  <p>👉 Isso cria o mesmo .exe, mas com o seu ícone e sem o terminal aparecendo.</p>
+
+  <hr>
+
+  <h2>📦 Passo 6 — Onde encontrar o programa pronto</h2>
+  <p>Entre na pasta do projeto e abra:</p>
+  <pre><code>C:\BuscadorDeImagens\dist</code></pre>
+
+  <p>Lá dentro, você verá o arquivo:</p>
+  <pre><code>buscador_img.exe</code></pre>
+
+  <p>Agora basta dar dois cliques para usar!</p>
+
+  <blockquote>
+    💡 Dica: Crie um atalho na área de trabalho clicando com o botão direito &gt; <strong>Enviar para → Área de Trabalho</strong>.
+  </blockquote>
+
+  <hr>
+
+  <h2>🚀 Passo 7 — Testando o programa</h2>
+  <p>1️⃣ Clique duas vezes no arquivo <strong>buscador_img.exe</strong>.<br>
+  2️⃣ Ele vai abrir e ficar aguardando você pressionar o atalho configurado (ex: Ctrl + Shift + I).<br>
+  3️⃣ Experimente selecionar o nome de uma imagem e usar o atalho — pronto! 🎉</p>
+
+
+  <hr>
+
+  <h2>🧠 Problemas comuns</h2>
+  <ul>
+    <li>❌ <strong>Erro de comando “pip” não encontrado:</strong>  
+      Feche o terminal, abra de novo, e tente o comando:
+      <pre><code>python -m pip install pyinstaller</code></pre></li>
+
+    <li>⚠️ <strong>O antivírus apagou o .exe:</strong>  
+      Isso acontece com programas novos. Marque o arquivo como “confiável” no antivírus.</li>
+
+    <li>📁 <strong>O .exe não acha suas imagens:</strong>  
+      Verifique se o caminho da variável <code>PASTA_ALVO</code> no código Python está correto.</li>
+  </ul>
+
+  <hr>
+
+  <h2>🎁 Passo Extra — Criar um atalho fácil</h2>
+  <p>Se quiser que o programa abra com um clique, crie um arquivo chamado <code>abrir_programa.bat</code> dentro da pasta do programa.</p>
+
+  <p>Dentro dele, coloque isto:</p>
+  <pre><code>@echo off
+start "" "%~dp0\buscador_img.exe"
+exit</code></pre>
+
+  <p>Agora, basta clicar duas vezes nesse arquivo para abrir o programa!</p>
+
+  <hr>
+
+  <h2>📚 Links úteis</h2>
+  <ul>
+    <li>🐍 <a href="https://www.python.org/downloads/" target="_blank">Baixar Python</a></li>
+    <li>📦 <a href="https://pyinstaller.org/en/stable/" target="_blank">Site oficial do PyInstaller</a></li>
+    <li>💻 <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code (Editor de código opcional)</a></li>
+  </ul>
+
+  <hr>
+
+  <p style="text-align:center; color:#777; font-size:0.9rem;">
+    © 2025 — Guia simples criado para ajudar qualquer pessoa a transformar o Buscador de Imagens em um programa de verdade 🐍✨
+  </p>
+
+</body>
+</html>

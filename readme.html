@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Imagens por Seleção — README</title>
+  <link rel="stylesheet" href="data/estilo.css">
+</head>
+<body>
+
+  <h1>🔍 Buscador de Imagens por Seleção (Executável)</h1>
+
+  <h2>🧠 O que é?</h2>
+  <p>
+    O <strong>Buscador de Imagens por Seleção</strong> é uma ferramenta prática desenvolvida em Python e empacotada como
+    <strong>executável (.exe)</strong>. Seu objetivo é <strong>localizar e abrir rapidamente arquivos de imagem (.jpg)</strong>
+    dentro de uma pasta específica, usando <strong>qualquer texto selecionado na tela</strong> — sem precisar digitar nada.
+  </p>
+
+  <h2>⚙️ Funcionalidade</h2>
+  <ol>
+    <li>Você <strong>seleciona um texto</strong> (ex: o nome de uma imagem como <code>produto_123</code>).</li>
+    <li>Pressiona o <strong>atalho de teclado</strong> configurado (<code>Ctrl + Shift + I</code>, por padrão).</li>
+    <li>O programa:
+      <ul>
+        <li>Copia automaticamente o texto selecionado;</li>
+        <li>Busca dentro da pasta configurada (<code>PASTA_ALVO</code>) por arquivos <code>.jpg</code> que contenham esse texto no nome;</li>
+        <li>Abre a <strong>primeira imagem correspondente</strong> encontrada no visualizador padrão do Windows.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Tudo acontece em segundos — sem janelas, menus ou comandos extras.</p>
+
+  <h2>💻 Requisitos Mínimos</h2>
+  <ul>
+    <li><strong>Sistema Operacional:</strong> Windows 10 ou superior</li>
+    <li><strong>Memória RAM:</strong> 2 GB (mínimo recomendado)</li>
+    <li><strong>Armazenamento:</strong> 50 MB livres</li>
+    <li><strong>Permissões:</strong> Acesso de leitura à pasta de imagens</li>
+    <li><strong>Dependências:</strong> Nenhuma (bibliotecas já incluídas no executável)</li>
+  </ul>
+
+  <h2>🚀 Como Usar</h2>
+  <ol>
+    <li>Acesse a pasta do executável:
+      <pre><code>Consulta-Imagens-Rech-main\dist\buscador_img</code></pre>
+    </li>
+    <li>Dê <strong>duplo clique</strong> em:
+      <pre><code>buscador_img.exe</code></pre>
+    </li>
+    <li>O programa abrirá uma janela de terminal exibindo:
+      <pre><code>Aguardando atalho: ctrl+shift+i</code></pre>
+    </li>
+    <li>Deixe o programa rodando em segundo plano. Em qualquer aplicação:
+      <ul>
+        <li>Selecione o nome de uma imagem (ex: <code>amostra_005</code>);</li>
+        <li>Pressione <strong>Ctrl + Shift + I</strong>;</li>
+        <li>O buscador abrirá automaticamente a imagem correspondente.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>⚡ Exemplo de Uso</h2>
+  <blockquote>
+    Imagine que você está lendo um pedido que menciona o arquivo “peca_2204.jpg”.<br>
+    Basta selecionar o texto <strong>peca_2204</strong>, pressionar <strong>Ctrl + Shift + I</strong>,<br>
+    e o programa abrirá imediatamente essa imagem na pasta configurada.
+  </blockquote>
+
+  <h2>🧾 Informações Adicionais</h2>
+  <p>A pasta de busca e o atalho podem ser alterados no script original (<code>buscador_img.py</code>):</p>
+
+  <pre><code># Caminho da pasta de imagens
+PASTA_ALVO = r'C:\\Users\\Mateus\\Pictures'
+
+# Atalho personalizado
+ATALHO_USUARIO = 'ctrl+shift+i'
+  </code></pre>
+
+  <p>
+    O programa utiliza o comando nativo do Windows <code>os.startfile()</code> para abrir as imagens de forma rápida
+    e compatível com qualquer visualizador padrão.
+  </p>
+
+  <h2>💬 Observações</h2>
+  <ul>
+    <li>Mantenha o programa aberto enquanto realizar buscas (pode ser minimizado).</li>
+    <li>Para encerrar, pressione <strong>Ctrl + C</strong> na janela do terminal.</li>
+    <li>Se nenhuma imagem for encontrada, nada será aberto (verifique o nome e a pasta configurada).</li>
+  </ul>
+
+  <h2>Informações adicionai</h2>
+    <p>
+        Caso queira mais informações das funcionalidades do programa, configuração e instalação do Python, acesse o <a href="data/readme-2.html"><strong>arquivo original do projeto</strong></a> caso haja interesse em rodar o script localmente ou descobrir mais sobre o funcionamento do programa.
+    </p>
+
+  <h2>👨‍💻 Desenvolvido por</h2>
+  <p>
+    <strong>Mateus Moller</strong><br>
+    Projeto desenvolvido para otimizar o processo de consulta de imagens internas da empresa <strong>Reginato Metais</strong>.<br>
+    <strong>Versão executável:</strong> v1.0.0 — 2025
+  </p>
+
+  <hr>
+  <p style="text-align:center; color:#777; font-size:0.9rem;">
+    🧩 Ferramenta criada para agilizar o dia a dia de quem trabalha com grandes volumes de imagens.<br>
+    © 2025 — Buscador de Imagens por Seleção | Desenvolvido em Python 🐍
+  </p>
+
+</body>
+</html>

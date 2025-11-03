@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Imagens — README</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+  <h1>🖼️ Buscador de Imagens por Seleção</h1>
+
+  <p>
+    O <strong>buscador_img.py</strong> é um script simples em <strong>Python</strong> que automatiza a busca de arquivos
+    <code>.jpg</code> em uma pasta específica do computador.  
+    Ele lê o texto que você seleciona na tela e abre a imagem correspondente — ideal para quem trabalha com grandes
+    volumes de imagens ou nomes padronizados de arquivos.
+  </p>
+
+  <blockquote>
+    <strong>💡 Exemplo:</strong> selecione o nome <code>produto123</code> em qualquer aplicativo e pressione o atalho <strong>Ctrl + Shift + I</strong>.<br>
+    O script localizará automaticamente o arquivo <code>produto123.jpg</code> na pasta predefinida pelo DEV responsavel pela instalação local, e o abrirá no visualizador padrão.
+  </blockquote>
+
+  <h2>🧰 Requisitos</h2>
+  <ul>
+    <li>💻 Sistema Operacional: <strong>Windows 10 ou 11</strong></li>
+    <li>🐍 <strong>Python 3.8+</strong> instalado — <a href="https://www.python.org/downloads/" target="_blank">Baixar Python</a></li>
+    <li>📦 Gerenciador de pacotes <strong>pip</strong> (instalado automaticamente com o Python)</li>
+    <li>💡 (Opcional) Editor de código como <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> ou <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
+  </ul>
+
+  <h2>⚙️ Instalação Passo a Passo</h2>
+
+  <ol>
+    <li>
+      <strong>Verifique se o Python está instalado:</strong>
+      <pre><code>python --version</code></pre>
+      <p>Se aparecer algo como <code>Python 3.13.2</code>, siga para o próximo passo.</p>
+      <p>Caso não apareça, instale pelo link acima e marque a opção <strong>Add Python to PATH</strong>.</p>
+    </li>
+
+    <li>
+      <strong>Crie uma pasta para o programa:</strong>
+      <pre><code>C:\BuscadorDeImagens</code></pre>
+      <p>Copie o arquivo <code>buscador_img.py</code> para dentro dessa pasta.</p>
+    </li>
+
+    <li>
+      <strong>Instale as bibliotecas necessárias:</strong>
+      <pre><code>pip install keyboard pyautogui pyperclip</code></pre>
+      <p>Essas bibliotecas permitem que o Python detecte atalhos, copie texto e abra arquivos automaticamente.</p>
+    </li>
+  </ol>
+
+  <h2>🛠️ Configuração</h2>
+
+  <p>Abra o arquivo <code>buscador_img.py</code> com seu editor favorito e localize a linha:</p>
+  <pre><code>PASTA_ALVO = r'C:\\Users\\SeuUsuario\\Imagens'</code></pre>
+
+  <p>Substitua pelo caminho da pasta onde suas imagens estão armazenadas, por exemplo:</p>
+  <pre><code>PASTA_ALVO = r'C:\\Users\\Mateus\\Pictures'</code></pre>
+
+  <p>O atalho padrão é <code>Ctrl + Shift + I</code>, mas você pode alterar se desejar:</p>
+  <pre><code>ATALHO_USUARIO = 'ctrl+shift+i'</code></pre>
+  <p>Exemplo de mudança:</p>
+  <pre><code>ATALHO_USUARIO = 'alt+i'</code></pre>
+
+  <h2>▶️ Executando o Programa</h2>
+  <ol>
+    <li>Abra o terminal (ou PowerShell) dentro da pasta do programa.</li>
+    <li>Execute o script:
+      <pre><code>python buscador_img.py</code></pre>
+    </li>
+    <li>Você verá no terminal:
+      <pre><code>Aguardando atalho: ctrl+shift+i</code></pre>
+    </li>
+    <li>Agora o script está rodando em segundo plano, aguardando o atalho.</li>
+  </ol>
+
+  <h2>🔍 Como Usar</h2>
+  <ol>
+    <li>Abra qualquer programa (navegador, Word, Excel, etc.).</li>
+    <li>Selecione o nome de uma imagem, por exemplo: <code>produto001</code>.</li>
+    <li>Pressione <strong>Ctrl + Shift + I</strong>.</li>
+    <li>O script buscará por arquivos que contenham o texto selecionado e abrirá o primeiro encontrado.</li>
+  </ol>
+
+  <h2>🧠 Resumo Rápido</h2>
+  <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; border-color: #333;">
+    <thead>
+      <tr>
+        <th>Ação</th>
+        <th>Comando</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Verificar versão do Python</td><td><code>python --version</code></td></tr>
+      <tr><td>Instalar dependências</td><td><code>pip install keyboard pyautogui pyperclip</code></td></tr>
+      <tr><td>Executar o script</td><td><code>python buscador_img.py</code></td></tr>
+      <tr><td>Encerrar o programa</td><td><code>Ctrl + C</code></td></tr>
+    </tbody>
+  </table>
+
+  <h2>💡 Dicas Extras</h2>
+  <ul>
+    <li>Evite mover a pasta configurada após definir o caminho.</li>
+    <li>Crie um atalho na área de trabalho para abrir o script mais rápido.</li>
+    <li>Se o script não abrir a imagem, verifique se o nome contém letras maiúsculas/minúsculas diferentes.</li>
+    <li>Você pode transformar o script em executável com o <a href="https://pyinstaller.org/en/stable/" target="_blank">PyInstaller</a>:
+    <li>Caso queira rodalo localmente como um arquivo executável; <a href="extra.html"><strong>clique aqui</strong></a></li>
+      <pre><code>pyinstaller --onefile buscador_img.py</code></pre>
+    </li>
+  </ul>
+
+  <h2>🧩 Recursos Úteis</h2>
+  <ul>
+    <li>🐍 <a href="https://www.python.org/downloads/" target="_blank">Baixar Python</a></li>
+    <li>🧰 <a href="https://pypi.org/project/keyboard/" target="_blank">keyboard</a> | 
+            <a href="https://pypi.org/project/pyautogui/" target="_blank">pyautogui</a> | 
+            <a href="https://pypi.org/project/pyperclip/" target="_blank">pyperclip</a></li>
+    <li>💻 <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> (recomendado para editar o código)</li>
+    <li>📘 <a href="https://docs.python.org/3/" target="_blank">Documentação oficial do Python</a></li>
+  </ul>
+
+  <hr>
+  <p style="text-align:center; color:#777; font-size:0.9rem;">
+    © 2025 — Buscador de Imagens por Seleção | Desenvolvido com Python 🐍
+  </p>
+
+</body>
+</html>
